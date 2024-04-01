@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb7ejkrpv21kr"]
+
+[ext_resource type="PackedScene" uid="uid://dphjju8wp3oya" path="res://corner-in.glb" id="1_xuump"]
+[ext_resource type="PackedScene" uid="uid://irtkfencgyeb" path="res://corner-out.glb" id="2_rmcn6"]
+[ext_resource type="PackedScene" uid="uid://k4hlg2uvv6ip" path="res://floor.glb" id="3_ms3t7"]
+[ext_resource type="PackedScene" uid="uid://c10d2hx633dyy" path="res://wall.glb" id="4_afnvq"]
+
+[node name="Tileset" type="Node3D"]
+
+[node name="corner-in" parent="." instance=ExtResource("1_xuump")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.489282, 0, -0.119583)
+
+[node name="corner-out" parent="." instance=ExtResource("2_rmcn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65653, 1.19209e-07, -0.0264876)
+
+[node name="floor" parent="." instance=ExtResource("3_ms3t7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.34223, 0, 0.104322)
+
+[node name="wall" parent="." instance=ExtResource("4_afnvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.77237, 0, 0.0856736)
