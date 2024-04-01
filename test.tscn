@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://buwf1klpru0yf"]
+[gd_scene load_steps=6 format=3 uid="uid://buwf1klpru0yf"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ny287"]
 [ext_resource type="MeshLibrary" uid="uid://05eriv83ocfe" path="res://tiles/tilemap.tres" id="1_u3p61"]
 [ext_resource type="PackedScene" uid="uid://dvv7p8t8kaknr" path="res://Scenes/character.tscn" id="2_jtboh"]
+[ext_resource type="PackedScene" uid="uid://da4khu38tkjl8" path="res://Scenes/pause_menu.tscn" id="3_ru7ae"]
 
 [sub_resource type="Environment" id="Environment_dtpxd"]
 background_mode = 1
@@ -12,6 +14,7 @@ fog_light_energy = 0.02
 fog_density = 0.1
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_ny287")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -26,3 +29,5 @@ environment = SubResource("Environment_dtpxd")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_jtboh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75641, 0)
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_ru7ae")]
